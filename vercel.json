@@ -1,13 +1,1 @@
-{
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/",
-      "has": [
-        {
-          "type": "missing"
-        }
-      ]
-    }
-  ]
-}
+{ "rewrites": [{ "source": "/(.*)", "destination":"/"}]}
