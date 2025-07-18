@@ -27,7 +27,7 @@ const steps = [
 const HowItWorks = () => {
   return (
     <section
-      className="text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative bg-green-950 bg-cover bg-no-repeat bg-center"
+      className="text-white py-12 mt-8 sm:py-16 px-4 sm:px-6 lg:px-8 relative bg-green-950 bg-cover bg-no-repeat bg-center"
       style={{
         backgroundImage: `url(${BusinessImg})`,
       }}
@@ -65,22 +65,26 @@ const HowItWorks = () => {
         </div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1000px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1050px] mx-auto">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="px-6 py-5 rounded-lg text-left hover:opacity-95 transition w-full"
-              style={{ backgroundColor: '#14243d' }}
+              className="group relative px-6 py-5 rounded-lg text-left transition-all w-full overflow-hidden
+                bg-[#14243d] text-white shadow-xl
+                before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-[#3574b8] before:transition-all before:duration-500
+                after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:bg-[#3574b8] after:transition-all after:duration-500
+                hover:before:w-1/2 hover:after:w-1/2  hover:text-black"
+
             >
-              <div className="flex items-center gap-3 mb-3">
+              <div className="relative z-10 flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 rounded-full bg-[#3574b8] text-[#e6edf8] font-bold flex items-center justify-center text-base">
                   {step.number}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-[#e6edf8]">
+                <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-white transition-colors duration-300">
                   {step.title}
                 </h3>
               </div>
-              <p className="text-sm sm:text-base font-[7px] text-[#e6edf8] leading-relaxed">
+              <p className="text-[15px] font-normal text-white leading-relaxed relative z-10 group-hover:text-white transition-colors duration-300">
                 {step.description}
               </p>
             </div>

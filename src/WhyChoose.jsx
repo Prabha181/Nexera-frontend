@@ -92,7 +92,7 @@ const WhyChoose = () => {
   ];
 
   return (
-    <section className="relative py-16 sm:py-10 bg-white mt-1">
+    <section className="relative py-16 mt-16 sm:py-10 bg-white mt-1">
       {/* White glow behind content */}
       <div className="absolute inset-0 bg-white opacity-20 blur-3xl z-0 rounded-xl mx-auto max-w-5xl left-0 right-0" />
 

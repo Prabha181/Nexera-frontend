@@ -33,8 +33,8 @@ const Home = () => {
       <div className="-mt-16 relative z-10">
       {/* <WorkOptions /> */}
       </div>
-      {/* <IndustriesServed /> */}
-      {/* <HowItWorks /> */}
+      <IndustriesServed />
+      <HowItWorks />
       <Team />
       <LatestNews />
       <Newsletter />
