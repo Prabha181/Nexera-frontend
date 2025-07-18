@@ -7,6 +7,10 @@ import {
 import { User, Briefcase } from 'lucide-react';
 import Subscribe from '../../Subscribe';
 
+// ✅ Import images from assets folder
+import person1 from '../../../assets/person1.jpg';
+import person2 from '../../../assets/person2.jpg';
+
 const jobData = [
   {
     id: 1,
@@ -154,106 +158,102 @@ const JobOpenings = () => {
         </div>
 
         <div className="bg-white rounded-3xl shadow-xl sm:p-10 max-w-6xl mx-auto">
-  {/* Tabs */}
-            <div className="flex justify-center mb-12">
-              <div className="flex rounded-full p-2 gap-1 sm:gap-0 max-w-md w-[370px] h-[70px] bg-[#14243d]">
-                <button
-                  onClick={() => setActiveTab('talents')}
-                  className={`flex items-center justify-center gap-2 font-medium px-4 sm:px-6 py-2 rounded-full shadow-md flex-1 whitespace-nowrap transition ${
-                    activeTab === 'talents'
-                      ? 'bg-[#3574b8] text-[#e6edf8]'
-                      : 'bg-transparent text-[#e6edf8] hover:bg-[#3574b8] hover:text-black'
-                  }`}
-                >
-                  <User size={16} /> For Talents
-                </button>
-                <button
-                  onClick={() => setActiveTab('business')}
-                  className={`flex items-center justify-center gap-2 font-medium px-4 sm:px-6 py-2 rounded-full transition flex-1 whitespace-nowrap ${
-                    activeTab === 'business'
-                      ? 'bg-[#78EC54] text-black'
-                      : 'bg-transparent text-white hover:bg-[#3574b8] hover:text-[#e6edf8]'
-                  }`}
-                >
-                  <Briefcase size={16} /> For Business
-                </button>
+          {/* Tabs */}
+          <div className="flex justify-center mb-12">
+            <div className="flex rounded-full p-2 gap-1 sm:gap-0 max-w-md w-[370px] h-[70px] bg-[#14243d]">
+              <button
+                onClick={() => setActiveTab('talents')}
+                className={`flex items-center justify-center gap-2 font-medium px-4 sm:px-6 py-2 rounded-full shadow-md flex-1 whitespace-nowrap transition ${
+                  activeTab === 'talents'
+                    ? 'bg-[#3574b8] text-[#e6edf8]'
+                    : 'bg-transparent text-[#e6edf8] hover:bg-[#3574b8] hover:text-black'
+                }`}
+              >
+                <User size={16} /> For Talents
+              </button>
+              <button
+                onClick={() => setActiveTab('business')}
+                className={`flex items-center justify-center gap-2 font-medium px-4 sm:px-6 py-2 rounded-full transition flex-1 whitespace-nowrap ${
+                  activeTab === 'business'
+                    ? 'bg-[#78EC54] text-black'
+                    : 'bg-transparent text-white hover:bg-[#3574b8] hover:text-[#e6edf8]'
+                }`}
+              >
+                <Briefcase size={16} /> For Business
+              </button>
+            </div>
+          </div>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+            {/* Left Content */}
+            <div className="space-y-6">
+              <h1 className="text-3xl sm:text-4xl font-bold leading-snug">
+                An Award Winning Hiring <br />
+                Agency for <span className="text-[#3574b8]">12 years</span>
+              </h1>
+              <p className="text-gray-500 text-base">
+                Voted the fastest solution to implement the easiest to administer your employee & business.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {[{
+                  icon: <FaUserShield className="text-[#3574b8] text-xl" />, title: 'Easiest Admin', date: 'Fall 2023'
+                }, {
+                  icon: <FaThumbsUp className="text-[#3574b8] text-xl" />, title: 'Users love Us', date: 'Winter 2023'
+                }, {
+                  icon: <FaStar className="text-[#3574b8] text-xl" />, title: 'Leader', date: 'Winter 2023'
+                }, {
+                  icon: <FaUserFriends className="text-[#3574b8] text-xl" />, title: 'Best support', date: 'Winter 2023'
+                }].map((item, idx) => (
+                  <div key={idx} className="bg-[#e6edf8] rounded-xl p-4 flex items-center gap-4 shadow-sm">
+                    {item.icon}
+                    <div>
+                      <p className="font-semibold">{item.title}</p>
+                      <p className="text-sm text-gray-500">{item.date}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
-              {/* Left Content */}
-              <div className="space-y-6">
-                <h1 className="text-3xl sm:text-4xl font-bold leading-snug">
-                  An Award Winning Hiring <br />
-                  Agency for <span className="text-[#3574b8]">12 years</span>
-                </h1>
-                <p className="text-gray-500 text-base">
-                  Voted the fastest solution to implement the easiest to administer your employee & business.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {[{
-                    icon: <FaUserShield className="text-[#3574b8] text-xl" />, title: 'Easiest Admin', date: 'Fall 2023'
-                  }, {
-                    icon: <FaThumbsUp className="text-[#3574b8] text-xl" />, title: 'Users love Us', date: 'Winter 2023'
-                  }, {
-                    icon: <FaStar className="text-[#3574b8] text-xl" />, title: 'Leader', date: 'Winter 2023'
-                  }, {
-                    icon: <FaUserFriends className="text-[#3574b8] text-xl" />, title: 'Best support', date: 'Winter 2023'
-                  }].map((item, idx) => (
-                    <div key={idx} className="bg-[#e6edf8] rounded-xl p-4 flex items-center gap-4 shadow-sm">
-                      {item.icon}
-                      <div>
-                        <p className="font-semibold">{item.title}</p>
-                        <p className="text-sm text-gray-500">{item.date}</p>
-                      </div>
-                    </div>
-                  ))}
+            {/* Right Content */}
+            <div className="flex flex-col items-center lg:items-end gap-6">
+              {/* Top Section */}
+              <div className="flex items-center gap-4">
+                <img
+                  src={person1}
+                  alt="Person 1"
+                  className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover"
+                />
+                <div className="bg-[#e6edf8] rounded-full px-4 py-2 flex items-center gap-3 shadow-sm">
+                  <div className="bg-[#3574b8] p-2 rounded-full object-cover">
+                    <FaPhoneAlt className="text-[#e6edf8]" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-xs text-gray-500">ONLINE SUPPORT</p>
+                    <p className="font-semibold text-black">+912 (556) 889</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Right Content - Always show both elements */}
-              <div className="flex flex-col items-center lg:items-end gap-6">
-                {/* Top Section: Person 1 and Contact Info */}
-                <div className="flex items-center gap-4">
-                  {/* Person 1 Image */}
-                  <img
-                    src="/src/assets/person1.jpg"
-                    alt="Person 1"
-                    className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover"
-                  />
-                  {/* Contact Info */}
-                  <div className="bg-[#e6edf8] rounded-full px-4 py-2 flex items-center gap-3 shadow-sm">
-                    <div className="bg-[#3574b8] p-2 rounded-full object-cover">
-                      <FaPhoneAlt className="text-[#e6edf8]" />
-                    </div>
-                    <div className="text-left">
-                      <p className="text-xs text-gray-500">ONLINE SUPPORT</p>
-                      <p className="font-semibold text-black">+912 (556) 889</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Section: Experience Badge and Person 2 */}
-                <div className="flex items-center gap-4">
-                  {/* Experience Badge */}
-                  <div className="flex items-center gap-3 bg-[#14243d] text-white px-6 py-3  w-50 h-15 rounded-full font-medium shadow ">
+              {/* Bottom Section */}
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 bg-[#14243d] text-white px-6 py-3 w-50 h-15 rounded-full font-medium shadow">
                   <div className="bg-[#3574b8] text-[#e6edf8] font-bold text-lg w-15 h-10 flex items-center justify-center rounded-full">
                     12
                   </div>
                   <span>Year of Experience</span>
                 </div>
-                  {/* Person 2 Image */}
-                  <img
-                    src="/src/assets/person2.jpg"
-                    alt="Person 2"
-                    className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover"
-                  />
-                </div>
+                <img
+                  src={person2}
+                  alt="Person 2"
+                  className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover"
+                />
               </div>
             </div>
           </div>
-         </div>
+        </div>
+      </div>
       <Subscribe />
     </div>
   );
