@@ -1,31 +1,35 @@
 import { useRef, useState } from "react";
 
+// ✅ Import images properly from assets folder
+import testimonial1 from "../assets/testimonial-1.png";
+import testimonial3 from "../assets/testimonial-3.png";
+
 const testimonials = [
   {
     name: "Maharan Depaak",
     position: "CEO, Amaban",
-    image: "/src/assets/testimonial-1.png",
+    image: testimonial1,
     quote:
       "Recently I went through their recruitment process with Jobaway Company, and I was impressed by how smooth and efficient these were.",
   },
   {
     name: "Evan Clement",
     position: "HR Assistant, NFL",
-    image: "/src/assets/testimonial-3.png",
+    image: testimonial3,
     quote:
       "Company and was impressed by the personalized approach of their recruitment team. They kept me informed at every stage and ensured that I had all the information I needed to succeed.",
   },
   {
     name: "Maharan Depaak",
     position: "CEO, Amaban",
-    image: "/src/assets/testimonial-1.png",
+    image: testimonial1,
     quote:
       "Their process was super fast, and the experience was exceptional. I would definitely recommend them.",
   },
   {
     name: "Evan Clement",
     position: "HR Assistant, NFL",
-    image: "/src/assets/testimonial-3.png",
+    image: testimonial3,
     quote:
       "I felt supported throughout the entire recruitment journey. Great communication and very transparent.",
   },
@@ -35,23 +39,18 @@ export default function TestimonialSlider() {
   const scrollRef = useRef(null);
   const [current, setCurrent] = useState(0);
 
-  // Calculate scroll based on card width and cards visible at current viewport
   const handleScroll = (index) => {
     const container = scrollRef.current;
     if (!container) return;
 
-    // Responsive card width: On mobile ~80%, tablet ~50%, desktop ~30%
     const containerWidth = container.offsetWidth;
     let cardWidth;
 
     if (window.innerWidth < 640) {
-      // Mobile: show ~1 card fully at a time
       cardWidth = containerWidth * 0.8;
     } else if (window.innerWidth < 1024) {
-      // Tablet: ~2 cards visible
       cardWidth = containerWidth / 2;
     } else {
-      // Desktop: ~3 cards visible
       cardWidth = containerWidth / 3;
     }
 
