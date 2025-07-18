@@ -7,14 +7,19 @@ import Slider from './Slider';
 import { Link } from 'react-router-dom';
 import { Phone, User, Award, Heart, Headphones } from 'lucide-react';
 import Subscribe from './Subscribe';
+import about3 from '../assets/about-3.jpg';
+import about5 from '../assets/about-5.jpg';
+import about4 from '../assets/about-4.jpg';
+import about6 from '../assets/about-6.jpg';
+
 
 const About = () => {
-  const teamMembers = [
-    { id: 1, image: "/src/assets/about-3.jpg", position: "top-left" },
-    { id: 2, image: "/src/assets/about-5.jpg", position: "top-right" },
-    { id: 3, image: "/src/assets/about-4.jpg", position: "bottom-left" },
-    { id: 4, image: "/src/assets/about-6.jpg", position: "bottom-right" }
-  ];
+ const teamMembers = [
+  { id: 1, image: about3, position: "top-left" },
+  { id: 2, image: about5, position: "top-right" },
+  { id: 3, image: about4, position: "bottom-left" },
+  { id: 4, image: about6, position: "bottom-right" }
+];
 
   const awards = [
     { icon: <User className="w-6 h-6" />, title: "Easiest Admin", period: "Fall 2023" },
