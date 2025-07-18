@@ -29,7 +29,7 @@ function App() {
         </Routes>
       </div>
       {/* <Subscribe /> */}
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }

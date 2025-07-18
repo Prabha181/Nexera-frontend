@@ -25,15 +25,15 @@ const Newsletter = () => {
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="relative z-10 max-w-3xl mx-auto text-center text-white">
         <h2 className="text-2xl sm:text-4xl font-bold mb-6">Subscribe Newsletter</h2>
 
         <div className="mb-4">
-          <div className="flex items-center bg-white rounded-full shadow-lg overflow-hidden max-w-2xl mx-auto">
+          <div className="flex items-center bg-white rounded-full shadow-lg overflow-hidden max-w-2xl mx-auto w-155">
             {/* Mail Icon */}
-            <div className="flex items-center pl-5 pr-2">
+            <div className="flex items-center pl-6 pr-1">
               <Mail className="w-5 h-5 text-gray-400" />
             </div>
 
