@@ -20,7 +20,7 @@ const Login = () => {
             <label className="block mb-1 text-sm font-medium text-gray-700">Email *</label>
             <input
               type="email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-[#78eb54] transition"
+              className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-[#3574b8] transition"
             />
           </div>
 
@@ -28,12 +28,12 @@ const Login = () => {
             <label className="block mb-1 text-sm font-medium text-gray-700">Password *</label>
             <input
               type="password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-[#78eb54] transition"
+              className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-[#3574b8] transition"
             />
           </div>
 
           <button
-            className="w-full mb-4 relative h-12 bg-[#78EB54] text-black shadow-md rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
+            className="w-full mb-4 relative h-12 bg-[#3574b8] text-black shadow-md rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
               before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500
               after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500
               hover:before:w-1/2 hover:before:bg-[#26472B]
@@ -60,12 +60,12 @@ const Login = () => {
               <input type="checkbox" className="mr-2 accent-green-500 checked:text-white hover:bg-transparent" />
               Remember me
             </label>
-            <a href="#" className="text-black hover:text-[#78eb54]">Forget password?</a>
+            <a href="#" className="text-black hover:text-[#3574b8]">Forget password?</a>
           </div>
 
           <p className="text-sm text-center text-gray-700 mt-4">
             Not registered yet?{" "}
-            <Link to="/signup" className="text-[#78eb54] font-medium hover:underline">
+            <Link to="/signup" className="text-[#3574b8] font-medium hover:underline">
               Create an Account
             </Link>
           </p>

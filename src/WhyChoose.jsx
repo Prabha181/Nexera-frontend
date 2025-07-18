@@ -8,10 +8,7 @@ const WhyChoose = () => {
         'One unified Dashboard Organize. Track. Schedule. Hire. All in one smart workspace.',
       icon: (
         <div className="relative w-16 h-16 rounded-full bg-[#a8cdfa] overflow-hidden cursor-pointer group">
-          {/* Sliding overlay: positioned above background, below icon */}
           <div className="absolute top-[-100%] left-0 w-full h-full bg-[#3574b8] transition-transform duration-500 ease-in-out group-hover:top-0"></div>
-
-          {/* Icon */}
           <svg
             className="relative z-10 w-9 h-10 mx-auto mt-3 text-[#3574b8] group-hover:text-white transition-colors duration-300"
             fill="none"
@@ -33,10 +30,7 @@ const WhyChoose = () => {
         'Smart Match Algorithm AI-powered. Role-specific. Matches that make sense, instantly.',
       icon: (
         <div className="relative w-16 h-16 rounded-full bg-[#a8cdfa] overflow-hidden cursor-pointer group">
-          {/* Sliding overlay */}
           <div className="absolute top-[-100%] left-0 w-full h-full bg-[#3574b8] transition-transform duration-500 ease-in-out group-hover:top-0"></div>
-
-          {/* Icon */}
           <svg
             className="relative z-10 w-10 h-10 mx-auto mt-3 text-[#3574b8] group-hover:text-white transition-colors duration-300"
             fill="none"
@@ -56,10 +50,7 @@ const WhyChoose = () => {
         'All in one hiring work space Post. Manage. Communicate. No switching tabs or tools.',
       icon: (
         <div className="relative w-16 h-16 rounded-full bg-[#a8cdfa] overflow-hidden cursor-pointer group">
-          {/* Sliding overlay */}
           <div className="absolute top-[-100%] left-0 w-full h-full bg-[#3574b8] transition-transform duration-500 ease-in-out group-hover:top-0"></div>
-
-          {/* Icon */}
           <svg
             className="relative z-10 w-10 h-10 mx-auto mt-3 text-[#3574b8] group-hover:text-white transition-colors duration-300"
             fill="none"
@@ -111,10 +102,7 @@ const WhyChoose = () => {
 
   return (
     <section className="relative py-16 sm:py-10 bg-white mt-1">
-      {/* White glow behind content */}
       <div className="absolute inset-0 bg-white opacity-20 blur-3xl z-0 rounded-xl mx-auto max-w-5xl left-0 right-0" />
-
-      {/* Content Wrapper */}
      <div
         className="relative z-10 mx-auto px-4"
         style={{
@@ -145,7 +133,7 @@ const WhyChoose = () => {
             >
               {feature.icon}
               <h3 className="text-xl font-semibold text-gray-800 mb-5">{feature.title}</h3>
-              <p className="text-gray-600 mb-5 text-sm flex-grow">{feature.description}</p>
+              <p className="text-gray-600 mb- text-sm flex-grow">{feature.description}</p>
               <button className="mt-auto text-left text-black font-semibold text-sm hover:text-[#3574b8]">
                 Learn More <span className="ml-1">→</span>
               </button>
