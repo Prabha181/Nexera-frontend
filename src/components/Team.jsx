@@ -1,31 +1,19 @@
 import React from "react";
 
+// ✅ Import images from src/assets
+import tomImg from "../assets/tom.jpg";
+import loenardImg from "../assets/loenard.jpg";
+import gilbertImg from "../assets/gilbert.jpg";
+import franklinImg from "../assets/franklin.jpg";
+// You can add more imports if there are more team members
+
 const Team = () => {
   const teamMembers = [
-    { 
-      id: 1, 
-      name: "Tom Oliver", 
-      position: "Founder", 
-      image: "/src/assets/tom.jpg" 
-    },
-    { 
-      id: 2, 
-      name: "Loenard Barnes", 
-      position: "Lead Engineer", 
-      image: "/src/assets/loenard.jpg" 
-    },
-    { 
-      id: 3, 
-      name: "Gilbert Sherman", 
-      position: "Sale Manager", 
-      image: "/src/assets/gilbert.jpg" 
-    },
-    { 
-      id: 4, 
-      name: "Franklin Bailey", 
-      position: "Art Director", 
-      image: "/src/assets/franklin.jpg" 
-    },
+    { id: 1, name: "Tom Oliver", position: "Founder", image: tomImg },
+    { id: 2, name: "Loenard Barnes", position: "Lead Engineer", image: loenardImg },
+    { id: 3, name: "Gilbert Sherman", position: "Sale Manager", image: gilbertImg },
+    { id: 4, name: "Franklin Bailey", position: "Art Director", image: franklinImg },
+    // You can add more team members if needed
   ];
 
   return (
@@ -37,26 +25,10 @@ const Team = () => {
           </span>
         </div>  
         <h2 className="text-3xl font-bold text-gray-800 mb-10">Meet The Team</h2>
-        
-        {/* First row - 4 columns on md, 2 cols on sm, 1 col on xs */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-10">
-          {teamMembers.slice(0, 4).map((member) => (
-            <div key={member.id} className="flex flex-col items-center text-center">
-              <img 
-                src={member.image} 
-                alt={member.name} 
-                className="rounded-full mb-4 shadow-lg object-cover"
-                style={{ width: '100%', maxWidth: '240px', aspectRatio: '1 / 1' }}
-              />
-              <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
-              <p className="text-sm font-semibold text-gray-600">{member.position}</p>
-            </div>
-          ))}
-        </div>
-        
-        {/* Second row - 3 columns on sm+, 1 col on xs */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {teamMembers.slice(4, 7).map((member) => (
+
+        {/* Team grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {teamMembers.map((member) => (
             <div key={member.id} className="flex flex-col items-center text-center">
               <img 
                 src={member.image} 
