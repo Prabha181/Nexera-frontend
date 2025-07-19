@@ -29,7 +29,7 @@ const Team = () => {
             100% { transform: translateX(100%); opacity: 0; }
           }
           .group:hover .fly-out-right {
-            animation: flyOutRight 0.7s ease-in-out forwards;
+            animation: flyOutRight 0.6s ease-in-out;
           }
         `}
       </style>

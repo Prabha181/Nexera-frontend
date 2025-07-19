@@ -1,94 +1,24 @@
 import React from 'react';
 
+import hotelIcon from './assets/hotels.png';
+import hospitalityIcon from './assets/medical.png';
+import kitchenIcon from './assets/chef.png';
+import retailIcon from './assets/retail.png';
+import eventsIcon from './assets/event.png';
+import laborIcon from './assets/labor.png';
+import drivingIcon from './assets/driving.png';
+import seniorIcon from './assets/senior.png';
+
+
 const industries = [
-  { 
-    title: 'Hotel', 
-    count: '2853 Staffs', 
-    icon:  <img
-      src="/src/assets/hotels.png" 
-      alt="Hotel Icon"
-      width={45}
-      height={45}
-      className="object-cover" 
-    />
-  },
-  { 
-    title: 'Hospitality', 
-    count: '2256 Staffs', 
-    icon: <img
-      src="/src/assets/medical.png" 
-      alt="Hospitality Icon"
-      width={47}
-      height={47}
-      className="object-cover" 
-    />
-  },
-  { 
-    title: 'Kitchen', 
-    count: '1408 Staffs', 
-    icon: <img
-      src="/src/assets/chef.png" 
-      alt="Kitchen Icon"
-      width={50}
-      height={50}
-      className="object-cover" 
-    /> 
-  },
-  { 
-    title: 'Retail', 
-    count: '1740 Staffs', 
-    icon: <img
-      src="/src/assets/retail.png" 
-      alt="Retail Icon"
-      width={47}
-      height={47}
-      className="object-cover" 
-    />  
-  },
-  { 
-    title: 'Special Events', 
-    count: '3948 Staffs', 
-    icon: <img
-      src="/src/assets/event.png" 
-      alt="Special Events Icon"
-      width={45}
-      height={45}
-      className="object-cover" 
-    />  
-  },
-  { 
-    title: 'General Labor', 
-    count: '2984 Staffs', 
-    icon: <img
-      src="/src/assets/labor.png" 
-      alt="General Labor Icon"
-      width={45}
-      height={45}
-      className="object-cover" 
-    />  
-  },
-  { 
-    title: 'Driving', 
-    count: '4509 Staffs', 
-    icon: <img
-      src="/src/assets/driving.png" 
-      alt="Driving Icon"
-      width={47}
-      height={47}
-      className="object-cover" 
-    />  
-  },
-  { 
-    title: 'Senior Living', 
-    count: '1039 Staffs', 
-    icon: <img
-      src="/src/assets/senior.png" 
-      alt="Senior Living Icon"
-      width={53}
-      height={53}
-      className="object-cover" 
-    />  
-  }
+  { title: 'Hotel', count: '2853 Staffs', icon: hotelIcon },
+  { title: 'Hospitality', count: '2256 Staffs', icon: hospitalityIcon },
+  { title: 'Kitchen', count: '1408 Staffs', icon: kitchenIcon },
+  { title: 'Retail', count: '1740 Staffs', icon: retailIcon },
+  { title: 'Special Events', count: '3948 Staffs', icon: eventsIcon },
+  { title: 'General Labor', count: '2984 Staffs', icon: laborIcon },
+  { title: 'Driving', count: '4509 Staffs', icon: drivingIcon },
+  { title: 'Senior Living', count: '1039 Staffs', icon: seniorIcon },
 ];
 
 const IndustriesServed = () => {
@@ -99,22 +29,36 @@ const IndustriesServed = () => {
           <span className="text-xs uppercase font-bold tracking-widest text-[#3574b8]">
             Industries
           </span>
-        </div>  
-
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
-          Industries Served
-        </h2>
+        </div>
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Industries Served</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto border border-gray-200 rounded overflow-hidden grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
         {industries.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-start p-6 sm:p-8 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className={`
+              relative group cursor-pointer overflow-hidden bg-gray-50 p-6 flex flex-col items-start
+              border-b border-r border-gray-200
+              ${index >= industries.length - 4 ? "border-b-0" : ""}
+              ${(index + 1) % 4 === 0 ? "border-r-0" : ""}
+            `}
           >
-            <div className="mb-4">{item.icon}</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
-            <p className="text-sm text-gray-600">{item.count}</p>
+            {/* Hover background animation */}
+            <span className="absolute top-0 left-0 h-0 w-0 bg-[#3574b8] transition-all duration-500 ease-out group-hover:h-full group-hover:w-full z-0"></span>
+
+            <img
+              src={item.icon}
+              alt={`${item.title} Icon`}
+              className="w-12 h-12 object-contain mb-4 relative z-10 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+            />
+
+            <h3 className="text-lg font-semibold mb-1 relative z-10 text-black group-hover:text-white transition-colors duration-300">
+              {item.title}
+            </h3>
+            <p className="text-sm relative z-10 text-gray-600 group-hover:text-white transition-colors duration-300">
+              {item.count}
+            </p>
           </div>
         ))}
       </div>

@@ -31,9 +31,9 @@ const Home = () => {
       <WhyChoose />
       <CompanyResearchBanner />
       <div className="-mt-16 relative z-10">
-      {/* <WorkOptions /> */}
+      <WorkOptions />
       </div>
-      {/* <IndustriesServed /> */}
+      <IndustriesServed />
       <HowItWorks />
       <Team />
       <LatestNews />

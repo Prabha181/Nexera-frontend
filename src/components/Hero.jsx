@@ -4,9 +4,9 @@ import BusinessImg from '../assets/hero_section_banner.png';
 const Hero = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center text-center min-h-screen px-4 sm:px-6 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${BusinessImg})` }}
-    >
+    className="flex flex-col items-center justify-center text-center min-h-screen px-4 sm:px-6 bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${BusinessImg})` }}
+  >
       <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
         Your Next Opportunity
         <br className="hidden sm:block" />

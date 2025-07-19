@@ -51,8 +51,7 @@ const Navigation = () => {
                 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 
                 hover:before:w-2/4 hover:before:bg-[#3574b8] 
                 hover:after:w-2/4 hover:after:bg-[#3574b8]
-                hover:text-white rounded-full flex items-center justify-center text-sm font-medium"
-            >
+                hover:text-white rounded-full flex items-center justify-center text-sm font-medium">
               <span className="relative z-10">Get Started</span>
             </Link>
           </div>
