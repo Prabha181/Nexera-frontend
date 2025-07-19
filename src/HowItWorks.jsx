@@ -21,7 +21,6 @@ const steps = [
     description:
       'View bios, reviews, and rosters before workers arrive on the job, and post reviews and pay, effortlessly.',
   },
-  
 ];
 
 const HowItWorks = () => {
@@ -48,7 +47,7 @@ const HowItWorks = () => {
         
         {/* Toggle Buttons */}
         <div className="flex justify-center mb-12">
-          <div className="flex rounded-full p-2 gap-1 sm:gap-0 max-w-md w-[370px] h-[70px] bg-[#14243d]">
+          <div className="flex rounded-full p-2 gap-2 sm:gap-0 max-w-md w-[370px] h-[70px] bg-[#14243d]">
             <button
               className="flex items-center gap-2 font-medium px-4 sm:px-6 py-2 rounded-full shadow-md flex-1 text-[#e6edf8] bg-[#3574b8] whitespace-nowrap"
               type="button"
@@ -69,22 +68,24 @@ const HowItWorks = () => {
           {steps.map((step) => (
             <div
               key={step.number}
-              className="group relative px-6 py-5 rounded-lg text-left transition-all w-full overflow-hidden
+              className="group relative px-6 py-5 rounded-lg text-left transition-all duration-500 w-full overflow-hidden
                 bg-[#14243d] text-white shadow-xl
-                before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-[#3574b8] before:transition-all before:duration-500
-                after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:bg-[#3574b8] after:transition-all after:duration-500
-                hover:before:w-1/2 hover:after:w-1/2  hover:text-black"
-
+                before:absolute before:left-0 before:top-0 before:h-full before:w-[120%] before:bg-white before:transition-all before:duration-500
+                before:-translate-x-full before:skew-x-12
+                hover:before:translate-x-0 hover:text-black"
             >
               <div className="relative z-10 flex items-center gap-3 mb-3">
-                <div className="w-8 h-8 rounded-full bg-[#3574b8] text-[#e6edf8] font-bold flex items-center justify-center text-base">
+                <div
+                  className="w-8 h-8 rounded-full bg-[#3574b8] text-[#e6edf8] font-bold flex items-center justify-center text-base
+                    hover:!bg-transparent hover:!text-[#3574b8] transition-colors duration-500"
+                >
                   {step.number}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-white transition-colors duration-300">
+                <h3 className="text-base sm:text-lg font-semibold transition-colors duration-500 relative z-10">
                   {step.title}
                 </h3>
               </div>
-              <p className="text-[15px] font-normal text-white leading-relaxed relative z-10 group-hover:text-white transition-colors duration-300">
+              <p className="text-[15px] font-normal leading-relaxed transition-colors duration-500 relative z-10">
                 {step.description}
               </p>
             </div>

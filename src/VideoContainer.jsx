@@ -32,15 +32,15 @@ const VideoContainer = () => {
       <div className="w-full max-w-[1100px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left: Image with decorative layers */}
-          <div className="relative w-full max-w-md mx-auto overflow-hidden">
+         <div className="relative w-full max-w-md mx-auto">
             {/* Decorative rotated layers */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
-              <div className="absolute inset-0 transform -rotate-2 bg-white opacity-60 shadow-xl rounded-xl scale-105" />
-              <div className="absolute inset-0 transform rotate-2 bg-gray-100 opacity-80 shadow-xl rounded-xl scale-105" />
+            <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+              <div className="absolute top-6 left-6 w-full h-full bg-white opacity-60 shadow-xl rounded-xl -rotate-[4deg]" />
+              <div className="absolute top-3 left-3 w-full h-full bg-gray-100 opacity-80 shadow-xl rounded-xl rotate-[3deg]" />
             </div>
 
             {/* Main image layer with play button */}
-            <div className="relative z-20 rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl">
               <img
                 src={BannerImage}
                 alt="Hospitality professional"
@@ -57,7 +57,6 @@ const VideoContainer = () => {
               </div>
             </div>
           </div>
-
           {/* Right: Text Content */}
           <div className="px-2 sm:px-0 text-center md:text-left">
             <div className="inline-block px-4 py-1 mb-2 rounded-full border border-[#3574b8] bg-[#e6edf8] shadow-sm">
