@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WhyChoose = () => {
+const WhyChooseUs = () => {
   const features = [
     {
       title: 'Unified Hiring Dashboard',
@@ -55,57 +55,13 @@ const WhyChoose = () => {
         </svg>
       ),
     },
-    // {
-    //   title: 'Seamless Candidate Experience',
-    //   description:
-    //     'Frictionless Experience Simple. Fast. Intuitive. Built for humans, not headaches.',
-    //   icon: (
-    //     <svg
-    //       className="w-10 h-10 sm:w-12 sm:h-12 text-[#3574b8] mb-4 flex-shrink-0"
-    //       fill="none"
-    //       stroke="currentColor"
-    //       strokeWidth="2"
-    //       viewBox="0 0 24 24"
-    //     >
-    //       <path d="M4 4h16v16H4z" strokeLinejoin="round" />
-    //       <path d="M8 10h8M8 14h5" strokeLinecap="round" />
-    //       <circle cx="12" cy="12" r="10" strokeOpacity="0.1" />
-    //     </svg>
-    //   ),
-    // },
-    // {
-    //   title: 'One-Click Apply',
-    //   description: 'One Click Apply System Apply in seconds. No forms. No friction. Just go.',
-    //   icon: (
-    //     <svg
-    //       className="w-10 h-10 sm:w-12 sm:h-12 text-[#3574b8] mb-4 flex-shrink-0"
-    //       fill="none"
-    //       stroke="currentColor"
-    //       strokeWidth="2"
-    //       viewBox="0 0 24 24"
-    //     >
-    //       <path d="M3 3l19 9-19 9 4-9z" strokeLinejoin="round" />
-    //       <path d="M4 12h16" strokeLinecap="round" />
-    //     </svg>
-    //   ),
-    // },
   ];
 
   return (
-    <section className="relative py-16 sm:py-10 bg-white mt-1">
-      {/* White glow behind content */}
-      <div className="absolute inset-0 bg-white opacity-20 blur-3xl z-0 rounded-xl mx-auto max-w-5xl left-0 right-0" />
-
-      {/* Content Wrapper */}
-     <div
-        className="relative z-10 mx-auto px-4"
-        style={{
-          maxWidth: '1050px',
-          minWidth: '320px',
-          Height: '20px',
-          width: '100%',
-        }}
->       {/* Header */}
+    <section className="py-6 sm:py-5 bg-white">
+      {/* Container matches StatCard */}
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-0">
+        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block px-4 py-1 mb-4 rounded-full border border-[#3574b8] bg-[#e6edf8] shadow-sm">
             <span className="text-xs uppercase font-bold tracking-widest text-[#3574b8]">
@@ -115,20 +71,17 @@ const WhyChoose = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-black">Why Choose Us</h2>
         </div>
 
-        {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-4">
+        {/* Responsive Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {features.map((feature, idx) => (
             <div
               key={idx}
-              tabIndex={0} // make div focusable (for keyboard click/focus)
-              className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col cursor-pointer
-                        hover:border-[#3574b8] focus:outline-none focus:ring-2 focus:ring-[#3574b8]"
-              style={{ minHeight: '170px', maxWidth: '400px' }} // compact height & fixed max width
+              className="w-full max-w-ms bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col cursor-pointer hover:border-[#3574b8] focus:outline-none focus:ring-2 focus:ring-[#3574b8]"
             >
               {feature.icon}
               <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
-              <p className="text-gray-600 mb-4 text-sm flex-grow">{feature.description}</p>
-              <button className="mt-auto text-left text-black font-semibold text-sm hover:text-[#3574b8]">
+              <p className="text-gray-600 text-sm flex-grow mb-4">{feature.description}</p>
+              <button className="text-left text-black font-semibold text-sm hover:text-[#3574b8]">
                 Learn More <span className="ml-1">→</span>
               </button>
             </div>
@@ -139,4 +92,4 @@ const WhyChoose = () => {
   );
 };
 
-export default WhyChoose;
+export default WhyChooseUs;

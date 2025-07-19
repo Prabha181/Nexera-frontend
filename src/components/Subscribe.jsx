@@ -6,7 +6,7 @@ import shapeBg from "../assets/shape-8.png";
 const Subscribe = () => {
   return (
     <div
-      className="max-w-6xl mx-auto mt-20 mb-10 px-4 sm:px-6 lg:px-8 bg-[#14243d] rounded-lg py-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-white bg-no-repeat bg-right bg-contain"
+      className="max-w-5xl mx-auto mt-15 px-4 lg:px-8 bg-[#14243d] rounded-lg py-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-white bg-no-repeat bg-right bg-contain"
       style={{ backgroundImage: `url(${shapeBg})` }}
     >
       {/* Left Text */}

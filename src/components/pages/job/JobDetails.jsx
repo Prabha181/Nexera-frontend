@@ -15,7 +15,7 @@ const JobDetails = () => {
       </div>
 
       {/* Content Layout */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10 py-8 justify-center content-center">
+      <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10 py-8 justify-center content-center">
         {/* Left Sidebar */}
         <div className="w-full lg:w-1/3 space-y-6">
           {/* Job Meta Info */}
@@ -100,22 +100,22 @@ const JobDetails = () => {
             <div className="flex flex-wrap items-center gap-3 mt-6 justify-center lg:justify-start">
               <span className="font-semibold text-black">Share On:</span>
               <a href="#" aria-label="Facebook">
-                <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center hover:bg-green-600 transition">
+                <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#3574b8] transition">
                   <FaFacebookF size={14} />
                 </div>
               </a>
               <a href="#" aria-label="Twitter">
-                <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center hover:bg-green-600 transition">
+                <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#3574b8] transition">
                   <FaTwitter size={14} />
                 </div>
               </a>
               <a href="#" aria-label="LinkedIn">
-                <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center hover:bg-green-600 transition">
+                <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#3574b8] transition">
                   <FaLinkedinIn size={14} />
                 </div>
               </a>
               <a href="#" aria-label="Dribbble">
-                <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center hover:bg-green-600 transition">
+                <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#3574b8] transition">
                   <FaDribbble size={14} />
                 </div>
               </a>

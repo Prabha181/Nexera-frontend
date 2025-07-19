@@ -147,8 +147,8 @@ const JobOpenings = () => {
       </div>
 
       {/* CTA Section with Tabs */}
-      <div className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+      <div className="max-w-6xl mx-auto mt-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <div className="text-center mb-10">
           <div className="inline-block px-4 py-1 mb-3 rounded-full border border-[#3574b8] bg-[#e6edf8]">
             <span className="text-[10px] uppercase font-bold tracking-widest text-[#3574b8]">
               Welcome to JobAway
@@ -157,7 +157,7 @@ const JobOpenings = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">Modern Day Staffing Agency</h2>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-xl sm:p-10 max-w-6xl mx-auto">
+        <div className="bg-white rounded-3xl shadow-xl sm:p-10 max-w-5xl">
           {/* Tabs */}
           <div className="flex justify-center mb-12">
             <div className="flex rounded-full p-2 gap-1 sm:gap-0 max-w-md w-[370px] h-[70px] bg-[#14243d]">
@@ -166,7 +166,7 @@ const JobOpenings = () => {
                 className={`flex items-center justify-center gap-2 font-medium px-4 sm:px-6 py-2 rounded-full shadow-md flex-1 whitespace-nowrap transition ${
                   activeTab === 'talents'
                     ? 'bg-[#3574b8] text-[#e6edf8]'
-                    : 'bg-transparent text-[#e6edf8] hover:bg-[#3574b8] hover:text-black'
+                    : 'bg-transparent text-[#e6edf8] hover:bg-[#3574b8] hover:text-white'
                 }`}
               >
                 <User size={16} /> For Talents
@@ -175,8 +175,8 @@ const JobOpenings = () => {
                 onClick={() => setActiveTab('business')}
                 className={`flex items-center justify-center gap-2 font-medium px-4 sm:px-6 py-2 rounded-full transition flex-1 whitespace-nowrap ${
                   activeTab === 'business'
-                    ? 'bg-[#78EC54] text-black'
-                    : 'bg-transparent text-white hover:bg-[#3574b8] hover:text-[#e6edf8]'
+                    ? 'bg-[#3574b8] text-white'
+                    : 'bg-transparent text-white hover:bg-[#3574b8] hover:text-white'
                 }`}
               >
                 <Briefcase size={16} /> For Business

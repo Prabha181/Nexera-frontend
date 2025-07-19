@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 
-// ✅ Import images properly from assets folder
 import testimonial1 from "../assets/testimonial-1.png";
 import testimonial3 from "../assets/testimonial-3.png";
 
@@ -62,7 +61,7 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <div className="py-16 bg-gradient-to-b from-white via-[#e6edf8] to-white text-center px-4 sm:px-6 lg:px-8">
+    <div className="py-2 mb-20 bg-gradient-to-b from-white via-[#e6edf8] to-white text-center px-4 sm:px-6 lg:px-8">
       <div className="inline-block px-4 py-1 mb-4 rounded-full border border-[#3574b8] bg-[#e6edf8] shadow-sm">
         <span className="text-xs uppercase font-bold tracking-widest text-[#3574b8]">
           Testimonials
@@ -78,7 +77,7 @@ export default function TestimonialSlider() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[80%] sm:w-[45%] lg:w-[30%] bg-white shadow-md rounded-lg px-6 py-6"
+            className="flex-shrink-0 w-[420px] sm:w-[460px] lg:w-[380px] bg-white shadow-md rounded-lg px-6 py-6"
             >
               <div className="flex items-center mb-4">
                 <img

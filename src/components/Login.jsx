@@ -5,7 +5,6 @@ const Login = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center px-4 py-10"
-      style={{ backgroundImage: "url('/src/assets/login-bg.png')" }}
     >
       {/* Heading and Breadcrumb - OUTSIDE the form card */}
       <div className="text-center mb-6">
@@ -36,8 +35,8 @@ const Login = () => {
             className="w-full mb-4 relative h-12 bg-[#3574b8] text-black shadow-md rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
               before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500
               after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500
-              hover:before:w-1/2 hover:before:bg-[#26472B]
-              hover:after:w-1/2 hover:after:bg-[#26472B]
+              hover:before:w-1/2 hover:before:bg-[#14243d]
+              hover:after:w-1/2 hover:after:bg-[#14243d]
               hover:text-white"
           >
             <span className="relative z-10">Login</span>
@@ -45,19 +44,19 @@ const Login = () => {
 
           <div className="text-center font-medium text-sm text-gray-700">Or</div>
 
-          <button className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-full text-black hover:bg-white hover:border-[#78eb54] focus:outline-none focus:border-green-500 active:border-green-500 transition">
+          <button className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-full text-black hover:bg-white hover:border-[#3574b8] focus:outline-none focus:border-[#3574b8] active:border-[#3574b8] transition">
             <img src="/src/assets/google.png" alt="Google" className="w-5 h-5" />
             Continue with Google
           </button>
 
-          <button className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-full text-black hover:bg-white hover:border-[#78eb54] focus:outline-none focus:border-green-500 active:border-green-500 transition">
+          <button className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-full text-black hover:bg-white hover:border-[#3574b8] focus:outline-none focus:border-[#3574b8] active:border-[#3574b8] transition">
             <img src="/src/assets/facebook.png" alt="Facebook" className="w-5 h-5" />
             Continue with Facebook
           </button>
 
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600 mt-3">
             <label className="flex items-center mb-2 sm:mb-0">
-              <input type="checkbox" className="mr-2 accent-green-500 checked:text-white hover:bg-transparent" />
+              <input type="checkbox" className="mr-2 accent-[#3574b8] checked:text-white hover:bg-transparent" />
               Remember me
             </label>
             <a href="#" className="text-black hover:text-[#3574b8]">Forget password?</a>
