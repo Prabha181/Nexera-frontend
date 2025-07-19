@@ -2,7 +2,7 @@ import React from 'react';
 
 const BrandLogo = () => {
   return (
-    <div className="relative z-20 -mt-[48px] sm:-mt-[64px] md:-mt-[50px]">
+    <div className="relative z-20 -mt-[48px] sm:-mt-[64px] md:-mt-[70px]">
       <div className="bg-white rounded-[12px] shadow-lg px-[16px] py-[24px] w-[350px] sm:w-[730px] md:w-[720px] lg:w-[960px] xl:w-[1030px] h-[120px] mx-auto">
         <div className="flex flex-wrap justify-center items-center gap-[24px] sm:gap-[32px] text-center">
 

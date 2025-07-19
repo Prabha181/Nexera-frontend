@@ -14,7 +14,7 @@ import HowItWorks from '../HowItWorks.jsx'
 import Team from '../Team.jsx'
 import LatestNews from '../LatestNews.jsx'
 import Newsletter from '../Newsletter.jsx'
-import Footer from '../Footer.jsx'
+// import Footer from '../Footer.jsx'
 
 
 const Home = () => {
@@ -29,11 +29,11 @@ const Home = () => {
       <StatCard />
       <AnimatedBanner />
       <WhyChoose />
-      {/* <CompanyResearchBanner /> */}
+      <CompanyResearchBanner />
       <div className="-mt-16 relative z-10">
       {/* <WorkOptions /> */}
       </div>
-      <IndustriesServed />
+      {/* <IndustriesServed /> */}
       <HowItWorks />
       <Team />
       <LatestNews />
