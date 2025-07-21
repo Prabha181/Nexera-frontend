@@ -5,7 +5,7 @@ const CompanyResearchBanner = () => {
   return (
     <section
       aria-label="Researching Companies Before Applying Banner"
-      className="relative w-full h-[350px] sm:h-[400px] md:h-[470px] bg-center bg-no-repeat flex items-center justify-center mt-10"
+      className="relative w-full h-[350px] sm:h-[400px] md:h-[470px] bg-center bg-no-repeat flex items-center justify-center mt-10 mb-[-40px]"
       style={{ backgroundImage: `url(${BannerImage})`, backgroundSize: 'cover' }}
     >
       {/* Overlay */}
@@ -18,7 +18,7 @@ const CompanyResearchBanner = () => {
             Category
           </span>
         </div>
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-10 sm:mb-40">
+        <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold text-white mb-10 sm:mb-40">
           Researching Companies <br className="hidden sm:block" />
           Before Applying
         </h1>

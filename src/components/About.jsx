@@ -11,6 +11,7 @@ import about3 from '../assets/about-3.jpg';
 import about5 from '../assets/about-5.jpg';
 import about4 from '../assets/about-4.jpg';
 import about6 from '../assets/about-6.jpg';
+import Subscribe from './Subscribe';
 
 const About = () => {
   const teamMembers = [
@@ -135,6 +136,7 @@ const About = () => {
         <Industries />
         <Team2 />
         <Slider />
+        <Subscribe />
       </div>
     </div>
   );

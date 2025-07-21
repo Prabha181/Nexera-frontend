@@ -78,6 +78,7 @@ const JobOpenings = () => {
   const [activeTab, setActiveTab] = useState('talents');
 
   return (
+    <>
     <div className="relative min-h-screen bg-white px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="max-w-6xl mx-auto text-center py-16">
@@ -254,8 +255,9 @@ const JobOpenings = () => {
           </div>
         </div>
       </div>
-      <Subscribe />
     </div>
+  <Subscribe />
+  </>
   );
 };
 

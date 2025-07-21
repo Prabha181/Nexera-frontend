@@ -32,7 +32,7 @@ const Login = () => {
           </div>
 
           <button
-            className="w-full mb-4 relative h-12 bg-[#3574b8] text-black shadow-md rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
+            className="w-full mb-4 relative h-12 bg-[#3574b8] text-white shadow-md rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
               before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500
               after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500
               hover:before:w-1/2 hover:before:bg-[#14243d]

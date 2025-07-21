@@ -2,7 +2,7 @@ import React from "react";
 
 const MapEmbed = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-1 mt-6">
       <div className="rounded-xl overflow-hidden border border-gray-200 shadow-md">
         <iframe
           title="Company Location Map"

@@ -9,11 +9,12 @@ const Contact = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-white py-12">
+      <div className="min-h-screen bg-white py-12 mb-5">
         {/* Consistent max width & padding */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-1 my-10"> */}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-1 space-y-6">
           {/* Page Title */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-18">
             <h2 className="text-3xl sm:text-4xl font-semibold text-black mb-2">
               Contact Us
             </h2>
@@ -26,7 +27,7 @@ const Contact = () => {
           </div>
 
           {/* Main Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 rounded-lg overflow-hidden shadow-xl gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 rounded-lg overflow-hidden shadow-xl gap-8 justify-items-center lg:justify-items-stretch">
             {/* Contact Info */}
             <div className="bg-[#14243d] text-white p-6 sm:p-8 space-y-8 rounded-lg">
               <h3 className="text-xl sm:text-2xl font-semibold">
@@ -80,49 +81,40 @@ const Contact = () => {
                     <label className="block text-sm mb-1">Name *</label>
                     <input
                       type="text"
-                      placeholder="Your Name"
-                      className="w-full h-11 px-4 border border-gray-300 rounded-full focus:outline-none"
-                    />
+                      className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-full text-black hover:bg-white hover:border-[#3574b8] focus:outline-none focus:border-[#3574b8] active:border-[#3574b8] transition"/>
                   </div>
                   <div>
                     <label className="block text-sm mb-1">Phone *</label>
                     <input
                       type="text"
-                      placeholder="Your Phone"
-                      className="w-full h-11 px-4 border border-gray-300 rounded-full focus:outline-none"
-                    />
+                      className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-full text-black hover:bg-white hover:border-[#3574b8] focus:outline-none focus:border-[#3574b8] active:border-[#3574b8] transition"/>
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm mb-1">Email Address *</label>
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full h-11 px-4 border border-gray-300 rounded-full focus:outline-none"
-                  />
-                </div>
+                  <div>
+                    <label className="block text-sm mb-1">Email Address *</label>
+                    <input
+                      type="email"
+                      className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-full text-black hover:bg-white hover:border-[#3574b8] focus:outline-none focus:border-[#3574b8] active:border-[#3574b8] transition"/>
+                  </div>
 
                 <div>
                   <label className="block text-sm mb-1">Subject *</label>
                   <input
                     type="text"
-                    placeholder="Subject"
-                    className="w-full h-11 px-4 border border-gray-300 rounded-full focus:outline-none"
-                  />
+                    className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-full text-black hover:bg-white hover:border-[#3574b8] focus:outline-none focus:border-[#3574b8] active:border-[#3574b8] transition"/>
                 </div>
 
                 <div>
                   <label className="block text-sm mb-1">Write Message *</label>
                   <textarea
                     rows="5"
-                    placeholder="Your Message"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-2xl resize-none focus:outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-2xl resize-none focus:outline-none flex items-center  justify-center gap-2 border border-gray-300 py-2 text-black hover:bg-white hover:border-[#3574b8] focus:outline-none focus:border-[#3574b8] active:border-[#3574b8] transition"
                   ></textarea>
                 </div>
 
                 <button
-                  className="mb-6 relative h-12 w-36 bg-[#3574b8] text-[#e6edf8] shadow-2xl rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
+                  className="mb-6 relative h-12 w-38 bg-[#3574b8] text-[#e6edf8] shadow-2xl rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
                     before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500
                     after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500
                     hover:before:w-1/2 hover:before:bg-[#14243d]
