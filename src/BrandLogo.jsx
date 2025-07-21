@@ -1,4 +1,8 @@
 import React from 'react';
+import telegraphLogo from './assets/telegraph.png';
+import warnerBrosLogo from './assets/warnerbros.png';
+import netAPorterLogo from './assets/netaporter.png';
+import brandStudioLogo from './assets/brandstudio.png';
 
 const BrandLogo = () => {
   return (
@@ -13,7 +17,7 @@ const BrandLogo = () => {
 
           <div className="flex items-center justify-center h-[40px]">
             <img
-              src="/src/assets/telegraph.png"
+              src={telegraphLogo}
               alt="The Telegraph Logo"
               className="h-12 w-auto" // Adjust height to fit nicely
             />
@@ -31,7 +35,7 @@ const BrandLogo = () => {
 
           <div className="flex items-center justify-center h-[40px]">
             <img
-              src="/src/assets/warnerbros.png"
+              src={warnerBrosLogo}
               alt="Warner Bros Discovery"
               className="h-10 w-auto" // Adjust height to fit nicely
             />
@@ -45,7 +49,7 @@ const BrandLogo = () => {
 
           <div className="flex items-center justify-center h-[40px]">
             <img
-              src="/src/assets/netaporter.png"
+              src={netAPorterLogo}
               alt="Net-A-Porter Logo"
               className="h-12 w-auto" // Adjust height to fit nicely
             />
@@ -61,7 +65,7 @@ const BrandLogo = () => {
 
           <div className="flex items-center justify-center h-[40px]">
             <img
-              src="/src/assets/brandstudio.png"
+              src={brandStudioLogo}
               alt="BrandStudio Logo"
               className="h-6 w-auto" // Adjust height to fit nicely
             />
