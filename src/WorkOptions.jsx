@@ -1,4 +1,6 @@
 import React from 'react';
+import workerImg from '/src/assets/worker.jpg';
+import businessImg from '/src/assets/business.png';
 
 const WorkOptions = () => {
   return (
@@ -21,7 +23,7 @@ const WorkOptions = () => {
             <span className="relative z-10">Job Seekers</span>
           </button>
           <img
-            src="/src/assets/worker.jpg"
+            src={workerImg}
             alt="Local Workers"
             className="w-full h-52 sm:h-64 md:h-72 object-cover rounded-xl"
           />
@@ -44,9 +46,10 @@ const WorkOptions = () => {
             <span className="relative z-10">Find Employee</span>
           </button>
           <img
-            src="/src/assets/business.png"
+            src={businessImg}
             alt="Business Owner"
-            className="w-full h-52 sm:h-64 md:h-72 object-cover rounded-xl"/>
+            className="w-full h-52 sm:h-64 md:h-72 object-cover rounded-xl"
+          />
         </div>
       </div>
     </div>

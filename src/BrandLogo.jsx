@@ -51,7 +51,7 @@ const BrandLogo = () => {
             <img
               src={netAPorterLogo}
               alt="Net-A-Porter Logo"
-              className="h-12 w-auto" // Adjust height to fit nicely
+              className="h-16 w-auto" // Adjust height to fit nicely
             />
           </div>
 

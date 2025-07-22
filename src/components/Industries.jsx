@@ -22,7 +22,6 @@ const industries = [
 const Industries = () => {
   return (
     <section className="py-6 sm:py-18 bg-white px-4 sm:px-6 lg:px-0">
-      {/* Consistent max-width container */}
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-8">
@@ -34,27 +33,29 @@ const Industries = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Industries Served</h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
           {industries.map((item, index) => (
             <div
               key={index}
-              className="relative w-[235px] h-[100px] bg-gray-50 rounded-xl p-6 shadow-md flex items-center justify-center text-center cursor-pointer overflow-hidden
+              className="relative w-full max-w-[235px] min-h-[100px] bg-gray-50 rounded-xl p-5 sm:p-6 shadow-md flex items-center justify-center text-center cursor-pointer overflow-hidden
                 before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500
                 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500
                 hover:before:w-2/4 hover:before:bg-[#3574b8]
                 hover:after:w-2/4 hover:after:bg-[#3574b8]
                 hover:text-white transition-all group"
             >
-              <div className="relative z-10 flex items-center space-x-4">
+              <div className="relative z-10 flex items-center space-x-3 sm:space-x-4">
                 <img
                   src={item.icon}
                   alt={`${item.title} icon`}
-                  className="w-12 h-12 object-contain transition duration-300 group-hover:brightness-0 group-hover:invert"
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain transition duration-300 group-hover:brightness-0 group-hover:invert"
                 />
                 <div className="text-left">
-                  <h3 className="text-lg font-semibold cursor-pointer hover:underline active:underline focus:underline">{item.title}</h3>
-                  <p className="text-sm">{item.count}</p>
+                  <h3 className="text-base sm:text-lg font-semibold cursor-pointer hover:underline active:underline focus:underline">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm">{item.count}</p>
                 </div>
               </div>
             </div>
