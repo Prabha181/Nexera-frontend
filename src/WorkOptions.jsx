@@ -12,20 +12,22 @@ const WorkOptions = () => {
           <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base max-w-xs sm:max-w-sm md:max-w-md">
             Join over 1 million workers who use GravyWork to find flexible and temp to hire opportunities.
           </p>
-          <button
-            className="mb-10 sm:mb-[-20px] relative h-11 sm:h-12 w-32 sm:w-36 bg-[#3574b8] text-white shadow-2xl rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
-              before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500
-              after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500
-              hover:before:w-1/2 hover:before:bg-[#14243d]
-              hover:after:w-1/2 hover:after:bg-[#14243d]
-              hover:text-white"
-          >
-            <span className="relative z-10">Job Seekers</span>
-          </button>
+          <div className="relative z-10">
+            <button
+              className="mb-10 sm:mb-[-20px] relative h-11 sm:h-12 w-32 sm:w-36 bg-[#3574b8] text-white shadow-2xl rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
+                before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500
+                after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500
+                hover:before:w-1/2 hover:before:bg-[#14243d]
+                hover:after:w-1/2 hover:after:bg-[#14243d]
+                hover:text-white"
+            >
+              <span className="relative z-10">Job Seekers</span>
+            </button>
+          </div>
           <img
             src={workerImg}
             alt="Local Workers"
-            className="w-full h-52 sm:h-64 md:h-72 object-cover rounded-xl"
+            className="w-full h-52 sm:h-64 md:h-72 object-cover rounded-xl transform transition duration-300 hover:scale-105 z-0"
           />
         </div>
 
@@ -35,20 +37,22 @@ const WorkOptions = () => {
           <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base max-w-xs sm:max-w-sm md:max-w-md">
             Finding individuals who share your company's values and vision can contribute to a cohesive team.
           </p>
-          <button
-            className="mb-10 sm:mb-[-20px] relative h-11 sm:h-12 w-32 sm:w-36 bg-[#3574b8] text-white shadow-2xl rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
-              before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500
-              after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500
-              hover:before:w-1/2 hover:before:bg-[#14243d]
-              hover:after:w-1/2 hover:after:bg-[#14243d]
-              hover:text-white"
-          >
-            <span className="relative z-10">Find Employee</span>
-          </button>
+          <div className="relative z-10">
+            <button
+              className="mb-10 sm:mb-[-20px] relative h-11 sm:h-12 w-32 sm:w-36 bg-[#3574b8] text-white shadow-2xl rounded-full flex items-center justify-center text-sm font-medium overflow-hidden transition-all
+                before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500
+                after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500
+                hover:before:w-1/2 hover:before:bg-[#14243d]
+                hover:after:w-1/2 hover:after:bg-[#14243d]
+                hover:text-white"
+            >
+              <span className="relative z-10">Find Employee</span>
+            </button>
+          </div>
           <img
             src={businessImg}
             alt="Business Owner"
-            className="w-full h-52 sm:h-64 md:h-72 object-cover rounded-xl"
+            className="w-full h-52 sm:h-64 md:h-72 object-cover rounded-xl transform transition duration-300 hover:scale-105 z-0"
           />
         </div>
       </div>

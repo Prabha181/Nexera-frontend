@@ -22,17 +22,39 @@ const Team = () => {
 
   return (
     <section className="py-8 bg-white mt-13">
-      <style>
-        {`
-          @keyframes flyOutRight {
-            0% { transform: translateX(0); opacity: 1; }
-            100% { transform: translateX(100%); opacity: 0; }
+      <style>{`
+        @keyframes circle {
+          0% {
+            opacity: 1;
           }
-          .group:hover .fly-out-right {
-            animation: flyOutRight 0.6s ease-in-out;
+          40% {
+            opacity: 1;
           }
-        `}
-      </style>
+          100% {
+            width: 200%;
+            height: 200%;
+            opacity: 0;
+          }
+        }
+
+        .circle-hover::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          background-color: rgba(255, 255, 255, 0.4);
+          transform: translate(-50%, -50%);
+          border-radius: 9999px;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .group:hover .circle-hover::before {
+          animation: circle 0.75s forwards;
+        }
+      `}</style>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Section Label */}
@@ -48,13 +70,15 @@ const Team = () => {
         {/* First row - 4 columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 mb-2">
           {teamMembers.slice(0, 4).map((member) => (
-            <div key={member.id} className="flex flex-col items-center text-center group">
-              <img 
-                src={member.image} 
-                alt={member.name} 
-                className="rounded-full mb-4 shadow-lg object-cover fly-out-right"
-                style={{ width: '100%', maxWidth: '230px', aspectRatio: '1 / 1' }}
-              />
+            <div key={member.id} className="group flex flex-col items-center text-center">
+              <figure className="relative overflow-hidden cursor-pointer circle-hover">
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="rounded-full mb-4 shadow-lg object-cover"
+                  style={{ width: '100%', maxWidth: '230px', aspectRatio: '1 / 1' }}
+                />
+              </figure>
               <h3 className="text-lg font-bold text-gray-900 mb-1 hover:text-[#3574b8] cursor-pointer transition-colors duration-300">
                 {member.name}
               </h3>
@@ -66,13 +90,15 @@ const Team = () => {
         {/* Second row - 3 columns */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 max-w-4xl mx-auto">
           {teamMembers.slice(4, 7).map((member) => (
-            <div key={member.id} className="flex flex-col items-center text-center group">
-              <img 
-                src={member.image} 
-                alt={member.name} 
-                className="rounded-full mb-4 shadow-lg object-cover fly-out-right"
-                style={{ width: '100%', maxWidth: '230px', aspectRatio: '1 / 1' }}
-              />
+            <div key={member.id} className="group flex flex-col items-center text-center">
+              <figure className="relative overflow-hidden cursor-pointer circle-hover">
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="rounded-full mb-4 shadow-lg object-cover"
+                  style={{ width: '100%', maxWidth: '230px', aspectRatio: '1 / 1' }}
+                />
+              </figure>
               <h3 className="text-lg font-bold text-gray-900 mb-1 hover:text-[#3574b8] cursor-pointer transition-colors duration-300">
                 {member.name}
               </h3>
